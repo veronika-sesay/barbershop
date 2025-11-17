@@ -1,0 +1,6 @@
+.black {
+  background-color: var(--carbon-black);
+  color: var(--floral-white);
+  text-align: center;
+  padding: 2rem;
+}

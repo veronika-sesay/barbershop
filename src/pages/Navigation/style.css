@@ -1,0 +1,158 @@
+/* Navigation Container */
+.navigation {
+  width: 100%;
+  background-color: var(--carbon-black);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Logo */
+.logo {
+  max-height: 100%;
+}
+
+/* Desktop Navigation */
+.desktop-nav {
+  display: none;
+  padding: 2rem 0;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10rem;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: var(--floral-white);
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: var(--autumn-ember);
+}
+
+/* Mobile Header */
+.mobile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 0;
+}
+
+.mobile-menu-button {
+  display: block;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.hamburger {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background-color: var(--dust-grey);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 2px;
+  background-color: var(--dust-grey);
+  transition: all 0.3s ease;
+}
+
+.hamburger::before {
+  top: -8px;
+}
+
+.hamburger::after {
+  top: 8px;
+}
+
+.hamburger.open {
+  background-color: transparent;
+}
+
+.hamburger.open::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.hamburger.open::after {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+/* Mobile Navigation */
+.mobile-nav {
+  display: block;
+  background-color: var(--carbon-black);
+  border-top: 1px solid var(--dust-grey);
+}
+
+.mobile-nav-links {
+  list-style: none;
+  margin: 0 0 0 auto;
+  padding: 1rem 2rem;
+  width: 50%;
+  text-align: right;
+}
+
+.mobile-nav-links li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--dust-grey);
+}
+
+.mobile-nav-links li:last-child {
+  border-bottom: none;
+}
+
+.mobile-nav-links li a {
+  text-decoration: none;
+  color: var(--floral-white);
+  font-weight: 500;
+  display: block;
+  transition: color 0.3s ease;
+}
+
+.mobile-nav-links li a:hover {
+  color: var(--autumn-ember);
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .desktop-nav {
+    display: block;
+  }
+
+  .mobile-header {
+    display: none;
+  }
+
+  .mobile-menu-button {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: none;
+  }
+}

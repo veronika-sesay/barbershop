@@ -1,0 +1,101 @@
+:root {
+  /* Color Palette */
+  --floral-white: #fffcf2ff;
+  --dust-grey: #ccc5b9;
+  --charcoal-brown: #403d39;
+  --carbon-black: #252422;
+  --autumn-ember: #ba5c12;
+
+  /* Breakpoints */
+  --breakpoint-xs: 480px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+
+  /* Fonts */
+  --font-heading: 'Norwester', Arial, sans-serif;
+  --font-body: 'Proxima Nova', Arial, sans-serif;
+  --font-size-base: 16px;
+  --line-height-base: 1.5;
+  --heading-letterspacing: 0.5px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+header {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--floral-white);
+  color: var(--carbon-black);
+  font-family: var(--font-body);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+}
+
+/* Heading system */
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  letter-spacing: var(--heading-letterspacing);
+}
+
+/* Body text */
+p,
+li {
+  font-family: var(--font-body);
+  font-weight: 400;
+  letter-spacing: 0.2px;
+}
+
+.container {
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 480px) {
+  .container {
+    width: 85%;
+  }
+}
+
+@media (min-width: 640px) {
+  .container {
+    width: 80%;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 75%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    width: 70%;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    width: 65%;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    width: 60%;
+  }
+}

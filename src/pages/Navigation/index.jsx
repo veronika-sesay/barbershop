@@ -40,7 +40,7 @@ const Navigation = () => {
 
       {/* Mobile Navigation */}
       {isMobileMenuOpen && (
-        <div className="mobile-nav">
+        <div className="mobile-nav container">
           <ul className="mobile-nav-links">
             <li>
               <a href="#hours" onClick={toggleMobileMenu}>

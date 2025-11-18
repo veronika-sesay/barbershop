@@ -1,6 +1,41 @@
 import { createRoot } from 'react-dom/client';
-import { HomePage } from './pages/HomePage';
+import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom';
 import './global.css';
 import './assets/fonts/fonts.css';
+import { HomePage } from './pages/HomePage';
+import Navigation from './pages/Navigation';
 
-createRoot(document.querySelector('#app')).render(<HomePage />);
+const App = () => {
+  return (
+    <>
+      <header>
+        <Navigation />
+      </header>
+      <main>
+        <Outlet />
+      </main>
+      <footer></footer>
+    </>
+  );
+};
+
+const container = document.querySelector('#app');
+if (container) {
+  createRoot(container).render(
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />}>
+          <Route index element={<HomePage />} />
+          <Route
+            path="*"
+            element={
+              <div style={{ padding: '3rem' }}>
+                <p>There is nothing here!</p>
+              </div>
+            }
+          />
+        </Route>
+      </Routes>
+    </BrowserRouter>,
+  );
+}

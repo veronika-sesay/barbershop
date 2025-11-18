@@ -16,13 +16,35 @@ const Navigation = () => {
         <div className="desktop-nav">
           <ul className="nav-links">
             <li>
-              <a href="#hours">Opening Hours</a>
+              <a
+                href="#hours"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.querySelector('#hours')?.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start',
+                  });
+                }}
+              >
+                Business Hours
+              </a>
             </li>
             <li>
               <img className="logo" src={logo} alt="logo" />
             </li>
             <li>
-              <a href="#location">Location</a>
+              <a
+                href="#location"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.querySelector('#location')?.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start',
+                  });
+                }}
+              >
+                Location
+              </a>
             </li>
           </ul>
         </div>
@@ -43,12 +65,32 @@ const Navigation = () => {
         <div className="mobile-nav container">
           <ul className="mobile-nav-links">
             <li>
-              <a href="#hours" onClick={toggleMobileMenu}>
-                Opening Hours
+              <a
+                href="#hours"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.querySelector('#hours')?.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start',
+                  });
+                  toggleMobileMenu();
+                }}
+              >
+                Business Hours
               </a>
             </li>
             <li>
-              <a href="#location" onClick={toggleMobileMenu}>
+              <a
+                href="#location"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.querySelector('#location')?.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start',
+                  });
+                  toggleMobileMenu();
+                }}
+              >
                 Location
               </a>
             </li>

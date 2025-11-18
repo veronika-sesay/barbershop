@@ -66,6 +66,25 @@ export const HomePage = () => {
           </div>
         </div>
       </section>
+      <section id="location" className="location-section">
+        <div className="container">
+          <h2>Location</h2>
+          <div className="map-container">
+            <iframe
+              src={`https://www.google.com/maps/embed?pb=${
+                import.meta.env.VITE_GOOGLE_MAPS_API_KEY
+              }`}
+              width="100%"
+              height="450"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Barber Shop Location"
+            ></iframe>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };

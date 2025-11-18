@@ -57,10 +57,15 @@
 /* Mobile Header */
 .mobile-header {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
   width: 100%;
   padding: 1rem 0;
+  position: relative;
+}
+
+.mobile-header .logo {
+  margin-bottom: 2.5rem;
 }
 
 .mobile-menu-button {
@@ -69,6 +74,10 @@
   border: none;
   cursor: pointer;
   padding: 0.5rem;
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0;
+  margin-bottom: 1rem;
 }
 
 .hamburger {

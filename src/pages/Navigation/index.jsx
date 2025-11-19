@@ -20,9 +20,9 @@ export const Navigation = () => {
                 href="#hours"
                 onClick={(e) => {
                   e.preventDefault();
-                  document.querySelector('#hours')?.scrollIntoView({
+                  document.querySelector('#hours-heading')?.scrollIntoView({
                     behavior: 'smooth',
-                    block: 'start',
+                    block: 'center',
                   });
                 }}
               >
@@ -34,9 +34,9 @@ export const Navigation = () => {
                 href="#photos"
                 onClick={(e) => {
                   e.preventDefault();
-                  document.querySelector('#photos')?.scrollIntoView({
+                  document.querySelector('#photos-heading')?.scrollIntoView({
                     behavior: 'smooth',
-                    block: 'start',
+                    block: 'center',
                   });
                 }}
               >
@@ -51,9 +51,9 @@ export const Navigation = () => {
                 href="#location"
                 onClick={(e) => {
                   e.preventDefault();
-                  document.querySelector('#location')?.scrollIntoView({
+                  document.querySelector('#location-heading')?.scrollIntoView({
                     behavior: 'smooth',
-                    block: 'start',
+                    block: 'center',
                   });
                 }}
               >
@@ -65,9 +65,9 @@ export const Navigation = () => {
                 href="#contacts"
                 onClick={(e) => {
                   e.preventDefault();
-                  document.querySelector('#contacts')?.scrollIntoView({
+                  document.querySelector('#contacts-heading')?.scrollIntoView({
                     behavior: 'smooth',
-                    block: 'start',
+                    block: 'center',
                   });
                 }}
               >
@@ -97,11 +97,13 @@ export const Navigation = () => {
                 href="#hours"
                 onClick={(e) => {
                   e.preventDefault();
-                  document.querySelector('#hours')?.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start',
-                  });
                   toggleMobileMenu();
+                  setTimeout(() => {
+                    document.querySelector('#hours-heading')?.scrollIntoView({
+                      behavior: 'smooth',
+                      block: 'center',
+                    });
+                  }, 100);
                 }}
               >
                 Business Hours
@@ -112,11 +114,13 @@ export const Navigation = () => {
                 href="#photos"
                 onClick={(e) => {
                   e.preventDefault();
-                  document.querySelector('#photos')?.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start',
-                  });
                   toggleMobileMenu();
+                  setTimeout(() => {
+                    document.querySelector('#photos-heading')?.scrollIntoView({
+                      behavior: 'smooth',
+                      block: 'center',
+                    });
+                  }, 100);
                 }}
               >
                 Photos
@@ -127,11 +131,15 @@ export const Navigation = () => {
                 href="#location"
                 onClick={(e) => {
                   e.preventDefault();
-                  document.querySelector('#location')?.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start',
-                  });
                   toggleMobileMenu();
+                  setTimeout(() => {
+                    document
+                      .querySelector('#location-heading')
+                      ?.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'center',
+                      });
+                  }, 100);
                 }}
               >
                 Location
@@ -142,11 +150,15 @@ export const Navigation = () => {
                 href="#contacts"
                 onClick={(e) => {
                   e.preventDefault();
-                  document.querySelector('#contacts')?.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start',
-                  });
                   toggleMobileMenu();
+                  setTimeout(() => {
+                    document
+                      .querySelector('#contacts-heading')
+                      ?.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'center',
+                      });
+                  }, 100);
                 }}
               >
                 Contacts

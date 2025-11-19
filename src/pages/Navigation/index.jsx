@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './style.css';
 import logo from './img/logo.svg';
 
-const Navigation = () => {
+export const Navigation = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => {
@@ -30,6 +30,20 @@ const Navigation = () => {
               </a>
             </li>
             <li>
+              <a
+                href="#photos"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.querySelector('#photos')?.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start',
+                  });
+                }}
+              >
+                Photos
+              </a>
+            </li>
+            <li>
               <img className="logo" src={logo} alt="logo" />
             </li>
             <li>
@@ -44,6 +58,20 @@ const Navigation = () => {
                 }}
               >
                 Location
+              </a>
+            </li>
+            <li>
+              <a
+                href="#contacts"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.querySelector('#contacts')?.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start',
+                  });
+                }}
+              >
+                Contacts
               </a>
             </li>
           </ul>
@@ -81,6 +109,21 @@ const Navigation = () => {
             </li>
             <li>
               <a
+                href="#photos"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.querySelector('#photos')?.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start',
+                  });
+                  toggleMobileMenu();
+                }}
+              >
+                Photos
+              </a>
+            </li>
+            <li>
+              <a
                 href="#location"
                 onClick={(e) => {
                   e.preventDefault();
@@ -94,11 +137,24 @@ const Navigation = () => {
                 Location
               </a>
             </li>
+            <li>
+              <a
+                href="#contacts"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.querySelector('#contacts')?.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start',
+                  });
+                  toggleMobileMenu();
+                }}
+              >
+                Contacts
+              </a>
+            </li>
           </ul>
         </div>
       )}
     </nav>
   );
 };
-
-export default Navigation;

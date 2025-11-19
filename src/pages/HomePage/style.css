@@ -167,6 +167,7 @@
   background-color: var(--charcoal-brown);
   color: var(--floral-white);
   padding: 4rem 0;
+  scroll-margin-top: 80px;
 }
 
 .hours {
@@ -231,6 +232,7 @@
   width: 100%;
   background-color: var(--floral-white);
   padding: 4rem 0;
+  scroll-margin-top: 80px;
 }
 
 .location-section h2 {
@@ -254,6 +256,7 @@
   background-color: var(--charcoal-brown);
   padding: 4rem 0;
   color: var(--floral-white);
+  scroll-margin-top: 80px;
 }
 
 .contacts-section h2 {

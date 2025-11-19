@@ -82,7 +82,7 @@ export const HomePage = () => {
       <section id="hours" className="hours-section">
         <div className="container">
           <div className="hours">
-            <h2>Business Hours</h2>
+            <h2 id="hours-heading">Business Hours</h2>
             <div className="hours-flex">
               <div className="hours-table">
                 <div className="day-hours">
@@ -123,7 +123,7 @@ export const HomePage = () => {
       </section>
       <section id="location" className="location-section">
         <div className="container">
-          <h2>Location</h2>
+          <h2 id="location-heading">Location</h2>
           <div className="map-container">
             <iframe
               src="https://www.google.com/maps?q=50.0808971,14.4232455&output=embed"
@@ -140,7 +140,7 @@ export const HomePage = () => {
       </section>
       <section id="contacts" className="contacts-section">
         <div className="container">
-          <h2>Contacts</h2>
+          <h2 id="contacts-heading">Contacts</h2>
           <div className="contact-details">
             <a href="tel:+420123456789">
               <strong>Phone:</strong> +420 123 456 789

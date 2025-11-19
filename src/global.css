@@ -31,13 +31,7 @@
 
 /* Scroll offset for sticky header */
 html {
-  scroll-padding-top: 250px;
-}
-
-@media (min-width: 768px) {
-  html {
-    scroll-padding-top: var(--nav-height);
-  }
+  scroll-behavior: smooth;
 }
 
 header {

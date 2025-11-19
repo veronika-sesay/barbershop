@@ -1,0 +1,16 @@
+.footer {
+  background-color: var(--carbon-black);
+  color: var(--floral-white);
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.footer p {
+  margin: 0.5rem 0;
+}
+
+.credits {
+  font-size: 0.9rem;
+  color: var(--dust-grey);
+  margin-top: 0.5rem;
+}

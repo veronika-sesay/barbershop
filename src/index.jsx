@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom';
 import './global.css';
 import './assets/fonts/fonts.css';
 import { HomePage } from './pages/HomePage';
-import Navigation from './pages/Navigation';
+import { Navigation } from './pages/Navigation';
 
 const App = () => {
   return (

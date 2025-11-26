@@ -243,8 +243,8 @@ export const HomePage = () => {
         <div className="container">
           <h2 id="contacts-heading">Contacts</h2>
           <div className="contact-details">
-            <a href="tel:+420123456789">
-              <strong>Phone:</strong> +420 123 456 789
+            <a href="tel:+420739819911">
+              <strong>Phone:</strong> +420 739 819 911
             </a>
             <a href="mailto:dekubesbarber@gmail.com">
               <strong>Email:</strong> dekubesbarber@gmail.com

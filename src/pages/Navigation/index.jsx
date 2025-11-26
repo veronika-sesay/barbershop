@@ -40,7 +40,7 @@ export const Navigation = () => {
                   });
                 }}
               >
-                Photos
+                Gallery
               </a>
             </li>
             <li>
@@ -123,7 +123,7 @@ export const Navigation = () => {
                   }, 100);
                 }}
               >
-                Photos
+                Gallery
               </a>
             </li>
             <li>

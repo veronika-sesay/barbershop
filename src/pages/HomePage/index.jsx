@@ -1,15 +1,46 @@
 import React, { useState } from 'react';
 import './style.css';
 import scissorsImage from './img/scissors.jpg';
+import evansImage from './img/evans.jpg';
+import shop1Image from './img/shop1.jpg';
+import shop2Image from './img/shop2.jpg';
+import shop3Image from './img/shop3.jpg';
+import shop4Image from './img/shop4.jpg';
+import shop5Image from './img/shop5.jpg';
+import shop6Image from './img/shop6.jpg';
 
 export const HomePage = () => {
   const [flippedCards, setFlippedCards] = useState({});
+  const [currentPhotoIndex, setCurrentPhotoIndex] = useState(0);
+
+  // Placeholder photos - replace with your actual images
+  const photos = [
+    { src: evansImage, alt: 'Evans' },
+    { src: shop1Image, alt: 'Barbershop interior 1' },
+    { src: shop2Image, alt: 'Barbershop interior 2' },
+    { src: shop3Image, alt: 'Barbershop interior 3' },
+    { src: shop4Image, alt: 'Barbershop interior 4' },
+    { src: shop5Image, alt: 'Barbershop interior 5' },
+    { src: shop6Image, alt: 'Barbershop interior 6' },
+  ];
 
   const toggleCard = (cardIndex) => {
     setFlippedCards((prev) => ({
       ...prev,
       [cardIndex]: !prev[cardIndex],
     }));
+  };
+
+  const nextPhoto = () => {
+    setCurrentPhotoIndex((prev) => (prev + 1) % photos.length);
+  };
+
+  const prevPhoto = () => {
+    setCurrentPhotoIndex((prev) => (prev - 1 + photos.length) % photos.length);
+  };
+
+  const goToPhoto = (index) => {
+    setCurrentPhotoIndex(index);
   };
 
   return (
@@ -76,7 +107,9 @@ export const HomePage = () => {
           </div>
         </div>
         <div className="booking container">
-          <button>Book an Appointment</button>
+          <button>
+            <a href="https://noona.app/cs/dekubesbarber">Book an Appointment</a>
+          </button>
         </div>
       </section>
       <section id="hours" className="hours-section">
@@ -118,6 +151,74 @@ export const HomePage = () => {
                 <img src={scissorsImage} alt="scissors" />
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+      <section id="photos" className="photos-section">
+        <div className="container">
+          <h2 id="photos-heading">Gallery</h2>
+          <div className="carousel">
+            <button
+              className="carousel-button prev"
+              onClick={prevPhoto}
+              aria-label="Previous photo"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="12" cy="12" r="11" className="button-bg" />
+                <path
+                  d="M14 16L10 12L14 8"
+                  className="button-arrow"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </button>
+            <div className="carousel-container">
+              <div
+                className="carousel-track"
+                style={{
+                  transform: `translateX(-${currentPhotoIndex * 100}%)`,
+                }}
+              >
+                {photos.map((photo, index) => (
+                  <div key={index} className="carousel-slide">
+                    <img src={photo.src} alt={photo.alt} />
+                  </div>
+                ))}
+              </div>
+            </div>
+            <button
+              className="carousel-button next"
+              onClick={nextPhoto}
+              aria-label="Next photo"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="12" cy="12" r="11" className="button-bg" />
+                <path
+                  d="M10 16L14 12L10 8"
+                  className="button-arrow"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+          <div className="carousel-dots">
+            {photos.map((_, index) => (
+              <button
+                key={index}
+                className={`dot ${index === currentPhotoIndex ? 'active' : ''}`}
+                onClick={() => goToPhoto(index)}
+              />
+            ))}
           </div>
         </div>
       </section>

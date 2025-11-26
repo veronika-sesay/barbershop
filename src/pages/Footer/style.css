@@ -9,6 +9,17 @@
   margin: 0.5rem 0;
 }
 
+.business-info {
+  margin-bottom: 1.5rem;
+  line-height: 1;
+  text-align: left;
+}
+
+.business-info p {
+  margin: 0.25rem 0 0 0;
+  font-size: 0.9rem;
+}
+
 .credits {
   font-size: 0.9rem;
   color: var(--dust-grey);

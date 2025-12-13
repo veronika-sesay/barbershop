@@ -247,6 +247,12 @@
   color: var(--carbon-black);
 }
 
+.location-address {
+  text-align: center;
+  font-weight: 600;
+  margin: 0.5rem 0;
+}
+
 .map-container {
   width: 100%;
   max-width: 100%;
@@ -358,17 +364,23 @@
 .carousel-dots {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 0.5rem;
 }
 
 .dot {
   width: 12px;
   height: 12px;
+  min-width: 12px;
+  min-height: 12px;
   border-radius: 50%;
   border: 2px solid var(--carbon-black);
   background-color: transparent;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
+  padding: 0;
+  flex-shrink: 0;
+  aspect-ratio: 1 / 1;
 }
 
 .dot:hover {

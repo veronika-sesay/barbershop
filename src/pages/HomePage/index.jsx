@@ -251,6 +251,11 @@ export const HomePage = () => {
       <section id="location" className="location-section">
         <div className="container">
           <h2 id="location-heading">Location</h2>
+          <p>
+            Find us at the heart of the city, easily accessible by public
+            transport and car.
+          </p>
+          <p className="location-address">Palackého 723/6, 110 00 Prague</p>
           <div className="map-container">
             <iframe
               src="https://www.google.com/maps?q=50.0808971,14.4232455&output=embed"

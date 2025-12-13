@@ -247,6 +247,12 @@
   color: var(--carbon-black);
 }
 
+.location-address {
+  text-align: center;
+  font-weight: 600;
+  margin: 0.5rem 0;
+}
+
 .map-container {
   width: 100%;
   max-width: 100%;

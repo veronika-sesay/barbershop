@@ -2,12 +2,25 @@ import React, { useState } from 'react';
 import './style.css';
 import scissorsImage from './img/scissors.jpg';
 import evansImage from './img/evans.jpg';
-import shop1Image from './img/shop1.jpg';
-import shop2Image from './img/shop2.jpg';
-import shop3Image from './img/shop3.jpg';
-import shop4Image from './img/shop4.jpg';
-import shop5Image from './img/shop5.jpg';
-import shop6Image from './img/shop6.jpg';
+import shopImage1 from './img/Barbershop_praha2025-1.jpg';
+import shopImage2 from './img/Barbershop_praha2025-2.jpg';
+import shopImage3 from './img/Barbershop_praha2025-3.jpg';
+import shopImage4 from './img/Barbershop_praha2025-4.jpg';
+import shopImage5 from './img/Barbershop_praha2025-5.jpg';
+import shopImage6 from './img/Barbershop_praha2025-6.jpg';
+import shopImage7 from './img/Barbershop_praha2025-7.jpg';
+import shopImage8 from './img/Barbershop_praha2025-8.jpg';
+import shopImage9 from './img/Barbershop_praha2025-9.jpg';
+import shopImage10 from './img/Barbershop_praha2025-10.jpg';
+import shopImage11 from './img/Barbershop_praha2025-11.jpg';
+import shopImage12 from './img/Barbershop_praha2025-12.jpg';
+import shopImage13 from './img/Barbershop_praha2025-13.jpg';
+import shopImage14 from './img/Barbershop_praha2025-14.jpg';
+import shopImage15 from './img/Barbershop_praha2025-15.jpg';
+import shopImage16 from './img/Barbershop_praha2025-16.jpg';
+import shopImage17 from './img/Barbershop_praha2025-17.jpg';
+import shopImage18 from './img/Barbershop_praha2025-18.jpg';
+import shopImage19 from './img/Barbershop_praha2025-19.jpg';
 
 export const HomePage = () => {
   const [flippedCards, setFlippedCards] = useState({});
@@ -15,13 +28,26 @@ export const HomePage = () => {
 
   // Placeholder photos - replace with your actual images
   const photos = [
+    { src: shopImage1, alt: 'Barbershop 1' },
+    { src: shopImage2, alt: 'Barbershop 2' },
+    { src: shopImage3, alt: 'Barbershop 3' },
+    { src: shopImage4, alt: 'Barbershop 4' },
+    { src: shopImage5, alt: 'Barbershop 5' },
+    { src: shopImage6, alt: 'Barbershop 6' },
+    { src: shopImage7, alt: 'Barbershop 7' },
+    { src: shopImage8, alt: 'Barbershop 8' },
+    { src: shopImage9, alt: 'Barbershop 9' },
+    { src: shopImage10, alt: 'Barbershop 10' },
+    { src: shopImage11, alt: 'Barbershop 11' },
+    { src: shopImage12, alt: 'Barbershop 12' },
+    { src: shopImage13, alt: 'Barbershop 13' },
+    { src: shopImage14, alt: 'Barbershop 14' },
+    { src: shopImage15, alt: 'Barbershop 15' },
+    { src: shopImage16, alt: 'Barbershop 16' },
+    { src: shopImage17, alt: 'Barbershop 17' },
+    { src: shopImage18, alt: 'Barbershop 18' },
+    { src: shopImage19, alt: 'Barbershop 19' },
     { src: evansImage, alt: 'Evans' },
-    { src: shop1Image, alt: 'Barbershop interior 1' },
-    { src: shop2Image, alt: 'Barbershop interior 2' },
-    { src: shop3Image, alt: 'Barbershop interior 3' },
-    { src: shop4Image, alt: 'Barbershop interior 4' },
-    { src: shop5Image, alt: 'Barbershop interior 5' },
-    { src: shop6Image, alt: 'Barbershop interior 6' },
   ];
 
   const toggleCard = (cardIndex) => {

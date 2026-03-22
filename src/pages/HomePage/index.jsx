@@ -145,27 +145,27 @@ export const HomePage = () => {
               <div className="hours-table">
                 <div className="day-hours">
                   <div className="day">Mon</div>
-                  <div className="hours-time">9:00 - 18:00</div>
+                  <div className="hours-time">10:00 - 19:00</div>
                 </div>
                 <div className="day-hours">
                   <div className="day">Tue</div>
-                  <div className="hours-time">9:00 - 18:00</div>
+                  <div className="hours-time">10:00 - 19:00</div>
                 </div>
                 <div className="day-hours">
                   <div className="day">Wed</div>
-                  <div className="hours-time">9:00 - 18:00</div>
+                  <div className="hours-time">10:00 - 19:00</div>
                 </div>
                 <div className="day-hours">
                   <div className="day">Thu</div>
-                  <div className="hours-time">9:00 - 18:00</div>
+                  <div className="hours-time">10:00 - 19:00</div>
                 </div>
                 <div className="day-hours">
                   <div className="day">Fri</div>
-                  <div className="hours-time">9:00 - 18:00</div>
+                  <div className="hours-time">10:00 - 19:00</div>
                 </div>
                 <div className="day-hours">
                   <div className="day">Sat</div>
-                  <div className="hours-time">9:00 - 18:00</div>
+                  <div className="hours-time">10:00 - 19:00</div>
                 </div>
                 <div className="day-hours closed">
                   <div className="day">Sun</div>

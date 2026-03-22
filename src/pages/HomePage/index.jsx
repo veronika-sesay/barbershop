@@ -26,7 +26,6 @@ export const HomePage = () => {
   const [flippedCards, setFlippedCards] = useState({});
   const [currentPhotoIndex, setCurrentPhotoIndex] = useState(0);
 
-  // Placeholder photos - replace with your actual images
   const photos = [
     { src: shopImage1, alt: 'Barbershop 1' },
     { src: shopImage2, alt: 'Barbershop 2' },
@@ -258,7 +257,7 @@ export const HomePage = () => {
           <p className="location-address">Palackého 723/6, 110 00 Prague</p>
           <div className="map-container">
             <iframe
-              src="https://www.google.com/maps?q=50.0808971,14.4232455&output=embed"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2560.2872873439896!2d14.420666876972545!3d50.08090787152412!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b9523254841cf%3A0x702a0fee3ca86f6f!2sDe%20Kubes%20Barber%20Shop!5e0!3m2!1sen!2scz!4v1774203812430!5m2!1sen!2scz"
               width="100%"
               height="450"
               style={{ border: 0 }}

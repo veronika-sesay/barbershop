@@ -68,6 +68,12 @@ export const HomePage = () => {
     setCurrentPhotoIndex(index);
   };
 
+  // Only mount the current slide and its neighbours (wrapping around)
+  const isNearCurrent = (index) => {
+    const distance = Math.abs(index - currentPhotoIndex);
+    return Math.min(distance, photos.length - distance) <= 1;
+  };
+
   return (
     <div className="home-page">
       <section className="services-section">
@@ -132,9 +138,12 @@ export const HomePage = () => {
           </div>
         </div>
         <div className="booking container">
-          <button>
-            <a href="https://noona.app/cs/dekubesbarber">Book an Appointment</a>
-          </button>
+          <a
+            className="booking-button"
+            href="https://noona.app/cs/dekubesbarber"
+          >
+            Book an Appointment
+          </a>
         </div>
       </section>
       <section id="hours" className="hours-section">
@@ -173,7 +182,12 @@ export const HomePage = () => {
                 </div>
               </div>
               <div className="hours-image">
-                <img src={scissorsImage} alt="scissors" />
+                <img
+                  src={scissorsImage}
+                  alt="scissors"
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
             </div>
           </div>
@@ -211,7 +225,14 @@ export const HomePage = () => {
               >
                 {photos.map((photo, index) => (
                   <div key={index} className="carousel-slide">
-                    <img src={photo.src} alt={photo.alt} />
+                    {isNearCurrent(index) && (
+                      <img
+                        src={photo.src}
+                        alt={photo.alt}
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    )}
                   </div>
                 ))}
               </div>

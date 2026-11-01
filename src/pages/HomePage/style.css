@@ -133,7 +133,8 @@
   /* position: relative; */
 }
 
-.booking button {
+.booking-button {
+  display: inline-block;
   padding: 0.75rem 1.5rem;
   background-color: var(--autumn-ember);
   color: var(--floral-white);
@@ -142,6 +143,7 @@
   font-size: 1.5rem;
   font-weight: 600;
   text-transform: uppercase;
+  text-decoration: none;
   cursor: pointer;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease,
@@ -149,21 +151,16 @@
   /* left: 55%; */
 }
 
-.booking button:hover {
+.booking-button:hover {
   transform: translateY(-5px) scale(1.05);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
   background-color: #a04d0f;
   color: white;
 }
 
-.booking button:active {
+.booking-button:active {
   transform: translateY(-1px);
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
-}
-
-.booking button a {
-  color: var(--floral-white);
-  text-decoration: none;
 }
 
 /* Hours Section */
